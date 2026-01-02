@@ -10,7 +10,7 @@ from cryptography.hazmat.backends import default_backend
 # ===== crypto stuff =====
 
 def hmac_sha(key, msg):
-    # probably not the best name but whatever
+    
     return hmac.new(key, msg, hashlib.sha256).digest()
 
 def encrypt(key, text_bytes):
