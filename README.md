@@ -47,45 +47,6 @@ Client                         Server
 | `ψ` PRP over `[0,m-1]` | Scrambles A positions (8-round Feistel) |
 | `E` AES-128-CTR | Encrypts nodes and documents |
 
-## Usage
-
-```bash
-pip install cryptography
-python SSE.py
-```
-
-The server **never** stores your key. When you create a user, the key is shown once. You must provide it for every search. Search words and keys are typed hidden (no echo).
-
-```
-SSE-1: Searchable Symmetric Encryption
-Curtmola et al. (ACM CCS 2006)
-
-The server never sees your key or plaintext words.
-
-1  new user
-2  search
-3  list users on server
-4  exit
-> 1
-username: alice
-user created: alice
-*** YOUR SECRET KEY (save this!): <128 hex chars> ***
-*** The server does NOT store your key. ***
-
-how many docs? 2
-doc 1: the quick brown fox
-doc 2: jumps over the lazy dog
-encrypted and saved on server
-
-> 2
-user: alice
-key (will not echo):
-search word (will not echo; type 'back' to exit):
-matches:
-  [1] the quick brown fox
-----
-```
-
 ## Reference
 
-Curtmola, Garay, Kamara, Ostrovsky. *"Searchable Symmetric Encryption: Improved Definitions and Efficient Constructions"*. ACM CCS 2006. [PDF](74.pdf)
+Curtmola, Garay, Kamara, Ostrovsky. *"Searchable Symmetric Encryption: Improved Definitions and Efficient Constructions"*. ACM CCS 2006.
